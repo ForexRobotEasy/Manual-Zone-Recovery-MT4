@@ -1,0 +1,94 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                             Manual Zone Recovery |
+//|                                                      MT4 Code    |
+//|                                         Developer - Forex Robot Easy Team |
+//|                                             Developer's site - forexroboteasy.com |
+//+------------------------------------------------------------------+
+
+//+------------------------------------------------------------------+
+//|                                                            Includes |
+//+------------------------------------------------------------------+
+#include <Trade\Trade.mqh>
+
+//+------------------------------------------------------------------+
+//|                                                  Global Variables |
+//+------------------------------------------------------------------+
+bool g_zoneRecoveryMode = false;
+
+//+------------------------------------------------------------------+
+//|                                             Function Declarations |
+//+------------------------------------------------------------------+
+void ZoneRecoveryMode();
+void RestrictStopLossModification();
+void ExcludePendingOrders();
+void CheckHedgingCompatibility();
+
+//+------------------------------------------------------------------+
+//|                                                   ZoneRecoveryMode |
+//|                              Description: Enables the Manual Zone Recovery tool to operate in Zone Recovery mode |
+//|                              Input Parameters: None |
+//|                              Output: None |
+//+------------------------------------------------------------------+
+void ZoneRecoveryMode()
+{
+    // Code to enable Zone Recovery mode
+    g_zoneRecoveryMode = true;
+}
+
+//+------------------------------------------------------------------+
+//|                                          RestrictStopLossModification |
+//|                              Description: Prevents modification of the Stop Loss during the execution of the strategy |
+//|                              Input Parameters: None |
+//|                              Output: None |
+//+------------------------------------------------------------------+
+void RestrictStopLossModification()
+{
+    // Code to restrict Stop Loss modification
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//|                                                     ExcludePendingOrders |
+//|                              Description: Ensures that no pending orders are placed when the StartPrice is reached |
+//|                              Input Parameters: None |
+//|                              Output: None |
+//+------------------------------------------------------------------+
+void ExcludePendingOrders()
+{
+    // Code to exclude pending orders
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//|                                             CheckHedgingCompatibility |
+//|                              Description: Verifies if the trading account allows hedging before executing Zone Recovery strategies |
+//|                              Input Parameters: None |
+//|                              Output: None |
+//+------------------------------------------------------------------+
+void CheckHedgingCompatibility()
+{
+    // Code to check hedging compatibility
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//|                                                  Expert Advisor |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    if (g_zoneRecoveryMode)
+    {
+        // Code for executing Zone Recovery strategies
+        // ...
+    }
+}
+
+//+------------------------------------------------------------------+
+//|                                                      Logical Conclusion |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+    // Code for cleaning up and ending the program gracefully
+    g_zoneRecoveryMode = false;
+}
